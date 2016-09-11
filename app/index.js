@@ -15,13 +15,34 @@ export class ProfilePic extends React.Component {
   }
 }
 
+export class Link extends React.Component {
+  constructor() {
+    super()
+    this.changeURL = this.changeURL.bind(this)
+  }
+
+  changeURL() {
+    window.location.replace(this.props.href)
+  }
+
+  render() {
+    return (
+      <span
+        style={{color: 'blue', cursor: 'pointer'}}
+        onClick={this.changeURL}>
+        {this.props.children}
+      </span>
+    )
+  }
+}
+
 export class ProfileLink extends React.Component {
   render() {
     return (
       <div>
-        <a href={`https://github.com/${this.props.username}`}>
+        <Link href={`https://github.com/${this.props.username}`}>
           {this.props.username}
-        </a>
+        </Link>
       </div>
     )
   }
@@ -40,8 +61,8 @@ export class Avatar extends React.Component {
     return (
       <div>
         <ProfilePic imageUrl={this.props.user.imageUrl} />
-        <ProfileLink username={this.props.user.username} />
         <ProfileName name={this.props.user.name} />
+        <ProfileLink username={this.props.user.username} />
       </div>
     )
   }
