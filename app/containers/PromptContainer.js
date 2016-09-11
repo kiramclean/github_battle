@@ -25,9 +25,8 @@ export class PromptContainer extends React.Component {
     })
 
     if (this.props.routeParams.playerOne) {
-      console.log(this.context)
       this.context.router.push({
-        path: '/battle',
+        pathname: '/battle',
         query: {
           playerOne: this.props.routeParams.playerOne,
           playerTwo: this.state.username
