@@ -1,8 +1,7 @@
 import axios from 'axios'
 
-let id = 'CLIENT_ID'
-let secret = 'SECRET_ID'
-let param = `?client_id${id}&client_secret=${secret}`
+let token = 'TOKEN'
+let param = `?access_token=${token}`
 
 function getUserInfo (username) {
   return axios.get(`https://api.github.com/users/${username}${param}`)
