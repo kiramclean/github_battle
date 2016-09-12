@@ -21,6 +21,7 @@
     "webpack-dev-server": "^1.15.1"
   },
   "dependencies": {
+    "axios": "^0.14.0",
     "react-router": "^2.8.0"
   }
 }
