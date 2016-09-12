@@ -19,6 +19,30 @@ const helpers = {
       console.warn('Error in getPlayersInfo: ', error)
     })
   }
+
+  function getUserInfo (username) {
+    return axios.get(`https://api.github.com/users/${username}${param}`)
+  }
+
+  battle() {
+
+  }
+
+  getRepos(username) {
+    return axios.get(`https://api.github.com/users/${username}/repos/${param}&per_page=100`)
+  }
+
+  getTotalStars(repos) {
+
+  }
+
+  getPlayersData(player) {
+
+  }
+
+  calculateScores(players) {
+
+  }
 }
 
 export default helpers

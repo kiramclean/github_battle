@@ -4,10 +4,6 @@ import { Link } from 'react-router'
 import UserDetails from './UserDetails'
 import UserDetailsWrapper from './UserDetailsWrapper'
 
-function puke (object) {
-  return <pre>{JSON.stringify(object, null, ' ')}</pre>
-}
-
 const ConfirmBattle = (props) => {
   return(
     props.isLoading === true
@@ -23,12 +19,14 @@ const ConfirmBattle = (props) => {
             </UserDetailsWrapper>
           </div>
           <div className='row' style={{justifyContent: 'center'}}>
-            <button type='button'>Initiate Battle</button>
+            <Link to='/results'>
+              <button type='button'>Initiate Battle</button>
+            </Link>
           </div>
           <div className='row' style={{justifyContent: 'center'}}>
             <Link to='/playerOne'>
               <button type='button'>
-                Link to /playerone
+                Select New Players
               </button>
             </Link>
           </div>
