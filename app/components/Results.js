@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import UserDetails from './UserDetails'
 import UserDetailsWrapper from './UserDetailsWrapper'
 import MainContainer from '../containers/MainContainer'
+import Loading from './Loading'
 
 const StartOver = () => {
   return(
@@ -17,7 +18,7 @@ const StartOver = () => {
 const Results = (props) => {
   if (props.isLoading === true) {
     <MainContainer>
-      <h1>LOADING...</h1>
+      <Loading />
     </MainContainer>
   }
 
