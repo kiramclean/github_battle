@@ -1,14 +1,16 @@
 import React from 'react'
-import style from '../styles/index'
 import { Link } from 'react-router'
 import UserDetails from './UserDetails'
 import UserDetailsWrapper from './UserDetailsWrapper'
+import MainContainer from '../containers/MainContainer'
 
 const ConfirmBattle = (props) => {
   return(
     props.isLoading === true
-      ? <div style={style.center}><h1>LOADING...</h1></div>
-      : <div style={style.center}>
+      ?  <MainContainer>
+          <h1>LOADING...</h1>
+        </MainContainer>
+      : <MainContainer>
           <h1>Confirm Players</h1>
           <div className='row'>
             <UserDetailsWrapper header='Player 1'>
@@ -19,9 +21,7 @@ const ConfirmBattle = (props) => {
             </UserDetailsWrapper>
           </div>
           <div className='row' style={{justifyContent: 'center'}}>
-            {/* <Link to='/results'> */}
-              <button type='button' onClick={props.onInitiateBattle}>Initiate Battle</button>
-            {/* </Link> */}
+            <button type='button' onClick={props.onInitiateBattle}>Initiate Battle</button>
           </div>
           <div className='row' style={{justifyContent: 'center'}}>
             <Link to='/playerOne'>
@@ -30,8 +30,7 @@ const ConfirmBattle = (props) => {
               </button>
             </Link>
           </div>
-        </div>
-
+        </MainContainer>
   )
 }
 
