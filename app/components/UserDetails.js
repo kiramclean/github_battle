@@ -11,7 +11,7 @@ const UserDetails = (user) => {
       {user.info.company && <p>Company: {user.info.company}</p>}
       <p>Followers: {user.info.followers}</p>
       <p>Following: {user.info.following}</p>
-      <p>Public Repos: {user.info.pubpc_repos}</p>
+      <p>Public Repos: {user.info.public_repos}</p>
       {user.info.blog && <p>Blog: <a href={user.info.blog}>{user.info.blog}</a></p>}
     </div>
   )

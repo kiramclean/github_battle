@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Results = () => {
+function dump (obj) {
+  return <pre>{JSON.stringify(obj, null, ' ')}</pre>
+}
+
+const Results = (props) => {
   return(
     <div>
-      Results component
+      {dump(props)}
     </div>
   )
 }

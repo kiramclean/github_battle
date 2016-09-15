@@ -19,9 +19,9 @@ const ConfirmBattle = (props) => {
             </UserDetailsWrapper>
           </div>
           <div className='row' style={{justifyContent: 'center'}}>
-            <Link to='/results'>
-              <button type='button'>Initiate Battle</button>
-            </Link>
+            {/* <Link to='/results'> */}
+              <button type='button' onClick={props.onInitiateBattle}>Initiate Battle</button>
+            {/* </Link> */}
           </div>
           <div className='row' style={{justifyContent: 'center'}}>
             <Link to='/playerOne'>
