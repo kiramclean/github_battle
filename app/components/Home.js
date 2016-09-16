@@ -8,7 +8,7 @@ export class Home extends React.Component {
       <div
         style={style.center}>
         <h1>Github Battle</h1>
-        <p>Motto goes here</p>
+        <p>Click the button</p>
         <Link to='/playerOne'>
           <button type='button'>Get Started</button>
         </Link>
